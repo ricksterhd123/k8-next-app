@@ -34,6 +34,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
     - set DNS on IP from load balancer (this is IP given by cloud provider, e.g. OVH kubernetes loadbalancer)
 
 ### Build
+- `npm install`
+- `npm run build`
 - Put `.env` file in root directory,
 ```sh
 PROJECT_NAME=k8-next-app
@@ -52,11 +54,10 @@ REGISTRY_PASSWORD=password
 REGISTRY_SECRET=regcred
 ```
 
-- Run pre-build script `npm run pre-build`
-- Run build-publish script `npm run build-publish`
+- Run publish script `npm run publish`
 
 ### Deployment
-- Update `chart/values.yaml` manually or override them
+- Update `chart/values.yaml`
 
 ```yaml
 replicas: 5
@@ -67,3 +68,7 @@ ingress:
 ```
 
 - Run deploy script `npm run deploy`
+
+### Cleanup
+- Clean build with `npm run clean`
+- Destroy everything with `npm run destroy`

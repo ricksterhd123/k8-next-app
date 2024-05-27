@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "pre-build": "bash scripts/pre-build.sh",
     "build": "next build",
-    "clean": "bash scripts/clean.sh",
-    "build-publish": "bash scripts/build.sh",
-    "deploy": "bash scripts/deploy.sh",
-    "destroy": "bash scripts/destroy.sh",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "publish": "bash scripts/publish.sh",
+    "clean": "bash scripts/clean.sh",
+    "deploy": "bash scripts/deploy.sh",
+    "update": "bash scripts/update.sh",
+    "destroy": "bash scripts/destroy.sh"
   },
   "dependencies": {
     "react": "^18",
