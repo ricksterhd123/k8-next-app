@@ -35,8 +35,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ### Build
 - `npm install`
-- `npm run build`
-- Put `.env` file in root directory,
+- Build static webapp `npm run build`
+- Put `.env` file in root directory
+
 ```sh
 PROJECT_NAME=k8-next-app
 NAMESPACE=my-namespace
@@ -54,7 +55,7 @@ REGISTRY_PASSWORD=password
 REGISTRY_SECRET=regcred
 ```
 
-- Run publish script `npm run publish`
+- Publish image to registry `npm run publish`
 
 ### Deployment
 - Update `chart/values.yaml`
@@ -67,8 +68,17 @@ ingress:
     emailAddress: admin@example.net
 ```
 
-- Run deploy script `npm run deploy`
+- Install helm chart `npm run deploy`
+
+### Update
+- Update image in register `npm run publish`
+- Perform rollover on kubernetes `npm run update`
 
 ### Cleanup
-- Clean build with `npm run clean`
-- Destroy everything with `npm run destroy`
+- Uninstall helm with `npm run destroy`
+- Clean up leftover build artifacts `npm run clean`
+
+## Nice to have
+- nginx-ingress as optional subchart/dependency
+- publish chart?
+- private docker registry secret handling: WARNING! Using --password via the CLI is insecure. Use --password-stdin.
