@@ -1,0 +1,25 @@
+{
+  "name": "k8-next-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "pre-build": "bash scripts/pre-build.sh",
+    "build": "next build",
+    "clean": "bash scripts/clean.sh",
+    "build-publish": "bash scripts/build.sh",
+    "deploy": "bash scripts/deploy.sh",
+    "destroy": "bash scripts/destroy.sh",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3"
+  }
+}

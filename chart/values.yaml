@@ -1,0 +1,5 @@
+replicas: 5
+ingress:
+  hostname: example.net
+  tls:
+    emailAddress: admin@example.net
